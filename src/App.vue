@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import SideBar from './components/SideBar.vue'
+  import { RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -9,9 +8,8 @@ import SideBar from './components/SideBar.vue'
       <h1 class="text-slate-900 font-extrabold text-4xl tracking-tight">DevSites</h1>
       <div class="mt-2 text-lg">Technologies and services related to PHP development</div>
     </header>
-    <main class="flex flex-row pb-20 w-[960px]">
+    <main class="flex flex-row pb-20">
       <RouterView />
-      <SideBar />
     </main>
   </div>
 </template>

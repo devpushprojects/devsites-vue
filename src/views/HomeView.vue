@@ -1,7 +1,7 @@
 <script setup lang="ts">
-//import TheWelcome from '../components/TheWelcome.vue'
+  import SitePanel from '../components/SitePanel.vue'
 </script>
 
 <template>
-  <div>Home!</div>
+  <SitePanel />
 </template>
