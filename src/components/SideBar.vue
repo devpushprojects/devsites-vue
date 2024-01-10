@@ -33,14 +33,14 @@
     <RouterLink
       :to="{ name: 'home' }"
       :class="categoryClass"
-      :data-state="props.categoryId === 0 ? 'active' : 'normal'">
+      :data-state="currentCategoryId === 0 ? 'active' : 'normal'">
       All
     </RouterLink>
     <RouterLink
       v-for="siteCategory in siteCategories"
       :to="{ name: 'category-sites', params: { id: siteCategory.id }}"
       :class="categoryClass"
-      :data-state="props.categoryId === siteCategory.id ? 'active' : 'normal'">
+      :data-state="currentCategoryId === siteCategory.id ? 'active' : 'normal'">
       {{ siteCategory.name }}
     </RouterLink>
   </div>
