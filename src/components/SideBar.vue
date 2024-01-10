@@ -6,9 +6,10 @@
 
   const props = defineProps<{ categoryId: number }>()
 
-  const siteCategories: Ref<SiteCategory[]> = ref([])
+  const siteCategories: Ref<SiteCategory[] | null> = ref([])
   const currentCategoryId: Ref<number> = ref(props.categoryId)
 
+    // TODO - Make css global
   const normalLinkClass: string      = 'block w-[inherit] text-left p-3 text-slate-700'
   const normalLinkHoverClass: string = 'hover:data-normal:underline hover:data-normal:underline-offset-8'
   const activeLinkClass: string      = 'data-active:underline data-active:underline-offset-4 data-active:decoration-2 data-active:font-extrabold'
@@ -27,7 +28,7 @@
 </script>
 
 <template>
-  <div v-if="siteCategories.length > 0" class="w-60 pl-10">
+  <div v-if="siteCategories && siteCategories.length > 0" class="w-60 pl-10">
     <h2 class="font-extrabold text-xl pb-3">Categories</h2>
     <RouterLink
       :to="{ name: 'home' }"

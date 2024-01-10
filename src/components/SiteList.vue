@@ -6,7 +6,7 @@
 
   const props = defineProps<{ categoryId?: number }>()
 
-  const sites: Ref<Site[]> = ref([])
+  const sites: Ref<Site[] | null> = ref([])
 
   const loadSites = async (categoryId: number) => {
     const url: string = `${import.meta.env.VITE_API_URL}/devsites/sites${categoryId ? `/category/${categoryId}` : ''}`
