@@ -9,7 +9,7 @@
   const sites: Ref<Site[] | null> = ref([])
 
   const loadSites = async (categoryId: number) => {
-    const url: string = `${import.meta.env.VITE_API_URL}/devsites/sites${categoryId ? `/category/${categoryId}` : ''}`
+    const url: string = `${import.meta.env.VITE_API_URL}/devsites${categoryId ? `/categorized/${categoryId}` : ''}`
     sites.value = await sendRequest<Site[]>(url)
   }
 
