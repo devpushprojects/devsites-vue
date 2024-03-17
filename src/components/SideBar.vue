@@ -16,7 +16,7 @@
   const categoryClass: string        = `${normalLinkClass} ${normalLinkHoverClass} ${activeLinkClass}`
 
   onMounted(async () => {
-    const url: string = `${import.meta.env.VITE_API_URL}/devsites/site-categories`
+    const url: string = `${import.meta.env.VITE_API_URL}/devsites/categories`
     siteCategories.value = await sendRequest<SiteCategory[]>(url)
   })
 
